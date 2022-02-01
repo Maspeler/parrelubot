@@ -26,7 +26,7 @@ while 0 < 6:
     if _GCAST_BLACKLIST.status_code != 200:
         if 0 != 5:
             continue
-        GCAST_BLACKLIST = [-1001473548283, -1001390552926, -1001743811338]
+        GCAST_BLACKLIST = [-1001473548283, -1001390552926, -1001743811338, -1001763075490]
         break
     GCAST_BLACKLIST = _GCAST_BLACKLIST.json()
     break
@@ -43,7 +43,7 @@ async def gcast(event):
         msg = await event.get_reply_message()
     else:
         return await edit_delete(event, "**Berikan Sebuah Pesan atau Reply**")
-    kk = await edit_or_reply(event, "`Globally Broadcasting Msg...`")
+    kk = await edit_or_reply(event, "`Tunggu Masih Proses Mengirim Ke Semua Group...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -74,7 +74,7 @@ async def gucast(event):
         msg = await event.get_reply_message()
     else:
         return await edit_delete(event, "**Berikan Sebuah Pesan atau Reply**")
-    kk = await edit_or_reply(event, "`Globally Broadcasting Msg...`")
+    kk = await edit_or_reply(event, "`Tunggu Masih Proses Mengirim Ke Semua Group...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
